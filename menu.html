@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú | Dolcces Samalith</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #fbf3e4;
+            --text-color: #4a3728;
+            --accent-red: #d32f2f;
+            --accent-gold: #ffcc00;
+            --white: #ffffff;
+        }
+
+        /* Marca de agua (igual que en index) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('20452.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 300px;
+            opacity: 0.07;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        body { font-family: 'Poppins', sans-serif; color: var(--text-color); margin: 0; background-color: var(--bg-color); }
+
+        header { padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; background: var(--white); border-bottom: 2px solid rgba(74, 55, 40, 0.1); }
+        .logo-img { height: 60px; width: auto; }
+        
+        .menu-container { max-width: 800px; margin: 40px auto; padding: 20px; }
+        .category-box { background: var(--white); padding: 30px; border-radius: 20px; margin-bottom: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .category-title { font-family: 'Playfair Display', serif; color: var(--accent-red); border-bottom: 2px solid var(--accent-gold); display: inline-block; margin-bottom: 20px; }
+
+        .menu-item { display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px dashed #ccc; padding-bottom: 5px; }
+
+        /* Botones */
+        .btn-container { text-align: center; padding: 20px 0 60px 0; display: flex; flex-direction: column; align-items: center; gap: 15px; }
+        .btn-order { background-color: var(--accent-red); color: var(--white); padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; width: 250px; text-align: center; }
+        .btn-back { border: 2px solid var(--text-color); color: var(--text-color); padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; width: 250px; text-align: center; }
+        
+        @media (max-width: 768px) { header { padding: 20px; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="20452.png" alt="Logo" class="logo-img">
+        </a>
+        <a href="index.html" style="color: var(--text-color); text-decoration: none; font-weight: bold;">« Volver</a>
+    </header>
+
+    <div class="menu-container">
+        <h1 style="text-align: center; font-family: 'Playfair Display', serif;">Nuestro Menú</h1>
+
+        <div class="category-box">
+            <h2 class="category-title">Café</h2>
+            <div class="menu-item"><div>Espresso Doble</div><span>$35</span></div>
+            <div class="menu-item"><div>Latte Vainilla</div><span>$55</span></div>
+            <div class="menu-item"><div>Capuccino</div><span>$50</span></div>
+        </div>
+
+        <div class="category-box">
+            <h2 class="category-title">Comida</h2>
+            <div class="menu-item"><div>Sándwich Gourmet</div><span>$85</span></div>
+            <div class="menu-item"><div>Bagel de Salmón</div><span>$95</span></div>
+            <div class="menu-item"><div>Ensalada Fresca</div><span>$70</span></div>
+        </div>
+
+        <div class="category-box">
+            <h2 class="category-title">Bebidas</h2>
+            <div class="menu-item"><div>Té Chai Helado</div><span>$45</span></div>
+            <div class="menu-item"><div>Smoothie Frutos</div><span>$60</span></div>
+        </div>
+    </div>
+
+    <div class="btn-container">
+        <a href="tel:+526531236398" class="btn-order"><i class="fas fa-phone-alt"></i> Llamar para Ordenar</a>
+        <a href="index.html" class="btn-back">Regresar al Inicio</a>
+    </div>
+
+</body>
+</html>
